@@ -10,6 +10,7 @@ public class ConstLoading {
 
     public static final String HELLO ="HELLO";
 
+
 }
 class NotInit{
         public static void main(String [] args){

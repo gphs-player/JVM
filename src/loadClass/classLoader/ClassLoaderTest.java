@@ -29,7 +29,7 @@ public class ClassLoaderTest {
             }
         };
 
-        Object obj = classLoader.loadClass("loadClass.SubClass");
+        Object obj = classLoader.loadClass("loadClass.SubClass").newInstance();
         System.out.println(obj.getClass());
         System.out.println(obj instanceof SubClass);
 

@@ -5,4 +5,6 @@ public class SuperClass {
         System.out.println("SuperClass init");
     }
     static int value;
+    protected String name="parent";
+
 }

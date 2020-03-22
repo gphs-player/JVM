@@ -3,7 +3,18 @@ package dispatch;
 /**
  * 静态分派
  */
-public class OverLoad {
+public class StaticDispatch {
+
+    static abstract class Human{
+
+    }
+    static class Man extends Human{
+
+    }
+
+    static class Women extends Human{
+
+    }
 
 
     public void sayHello(Human human){
@@ -22,9 +33,14 @@ public class OverLoad {
         Human man = new Man();
         Human woman = new Women();
 
-        OverLoad overLoad = new OverLoad();
+        StaticDispatch overLoad = new StaticDispatch();
+        //两个方法只会打印 hello guy
         overLoad.sayHello(man);
         overLoad.sayHello(woman);
+        //hello man
+        //hello women
+        overLoad.sayHello((Man) man);
+        overLoad.sayHello((Women)woman);
 
     }
 

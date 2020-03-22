@@ -1,6 +1,5 @@
 package proxy;
 
-import com.sun.tools.corba.se.idl.constExpr.Or;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -21,24 +20,24 @@ public class DynamicProxy {
     }
 
 
-    static class DynamicHello implements InvocationHandler{
-
+    static class DynamicHello implements InvocationHandler {
 
         Object obj;
 
-        Object bind(Object origin){
-            this.obj =  origin;
-            return Proxy.newProxyInstance(origin.getClass().getClassLoader(),origin.getClass().getInterfaces(),this);
+        Object bind(Object origin) {
+            this.obj = origin;
+            return Proxy.newProxyInstance(origin.getClass().getClassLoader(), origin.getClass().getInterfaces(), this);
         }
 
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
             System.out.println("welcome ");
-            return method.invoke(obj,args);
+            return method.invoke(obj, args);
         }
     }
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
 
         IHello hello = (IHello) new DynamicHello().bind(new Hello());
         hello.sayHello();
