@@ -10,8 +10,6 @@ import java.util.Set;
 /**
  * 运行的时候使用下面的方式
  * javac -processor annotation.NameCheckProcessor annotation/BADLY_CODE_NAME.java
- *
- *
  */
 @SupportedAnnotationTypes("*")//支持所有注解
 @SupportedSourceVersion(SourceVersion.RELEASE_8)

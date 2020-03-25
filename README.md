@@ -12,3 +12,9 @@
 
 ### [6.编译期优化](./docs/compileoptimize.md)
 
+### [7.运行期优化](./docs/runtimeoptimize.md)
+
+### [8.内存模型与线程](./docs/memory_model.md)
+
+### [9.线程安全与锁优化](./docs/thread_safe.md)
+

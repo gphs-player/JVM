@@ -72,6 +72,8 @@ public class NameChecker {
             return null;
         }
 
+
+
         /**
          * 检查变量命名是否合法
          */
